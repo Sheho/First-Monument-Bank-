@@ -7,14 +7,14 @@ import { motion, useMotionValue, useTransform, animate, useInView } from "framer
 import { AnimatedBadge } from "../components/AnimatedBadge";
 import { HeroSection } from "../components/HeroSection";
 import { GlassCard } from "../components/GlassCard";
-import { 
-  Lock, 
-  ShieldCheck, 
-  SmartphoneNfc, 
-  ChevronDown, 
-  ChevronUp, 
-  Star, 
-  Building, 
+import {
+  Lock,
+  ShieldCheck,
+  SmartphoneNfc,
+  ChevronDown,
+  ChevronUp,
+  Star,
+  Building,
   Globe,
   Wallet,
   PiggyBank,
@@ -46,7 +46,7 @@ function AnimatedStat({ prefix = "", value, suffix = "" }) {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-50px" });
   const motionValue = useMotionValue(0);
-  
+
   useEffect(() => {
     if (inView) {
       animate(motionValue, value, { duration: 2.5, ease: "easeOut" });
@@ -109,9 +109,9 @@ export function Home() {
 
   return (
     <div className="flex-grow flex flex-col items-center w-full">
-      
+
       {/* 1. Hero Section */}
-      <HeroSection 
+      <HeroSection
         badgeIcon={ShieldCheck}
         badgeText="Voted #1 Digital Bank 2026"
         titlePrefix="The Bank of"
@@ -119,16 +119,16 @@ export function Home() {
         titleSuffix=". Achieve everything you want in life."
         subtitle="Experience a partner in your financial journey. Enjoy simple, secure, and centralized access to your accounts, backed by our unwavering commitment to your financial health."
         primaryButtonText="Open an Account"
-        primaryButtonAction={(nav) => nav("/open-account")}
+        primaryButtonAction={(nav) => nav("https://account.firstmonument.com/register")}
         secondaryButtonText="Explore Features"
-        secondaryButtonAction={(nav) => {}}
+        secondaryButtonAction={(nav) => { }}
         illustration={HomeIllustration}
       />
 
       {/* 2. "Why First Monument Bank" / Stats */}
       <section className="w-full py-20 px-4 bg-[rgba(255,255,255,0.01)] border-b border-[var(--color-bank-border)] overflow-hidden">
         <div className="max-w-7xl mx-auto">
-          <motion.div 
+          <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
@@ -155,7 +155,7 @@ export function Home() {
       {/* 3. Product Highlights */}
       <section className="w-full py-24 px-4 border-b border-[var(--color-bank-border)] overflow-hidden">
         <div className="max-w-7xl mx-auto">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -164,39 +164,39 @@ export function Home() {
             <h2 className="text-xl md:text-2xl lg:text-3xl font-bold mb-4">Succeed financially with the right tools</h2>
             <p className="text-sm text-[var(--color-bank-text-muted)] max-w-2xl mx-auto">Whether you are looking for simple ways to manage your money, pay down balances, or monitor your activity, we have you covered every step of the way.</p>
           </motion.div>
-          
-          <motion.div 
+
+          <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
             variants={staggerContainer}
             className="grid md:grid-cols-3 gap-8"
           >
-             {[
-               { icon: Wallet, title: "First Monument Bank Checking", desc: "A modern checking account that actually works for you.", features: ["No overdraft fees", "Get paid up to 2 days early", "Instantly send money to friends"] },
-               { icon: PiggyBank, title: "High-Yield Savings", desc: "Earn more on your money with industry-leading rates.", features: ["4.50% Annual Percentage Yield", "No minimum balance to open", "Automated savings rules"] },
-               { icon: CreditCardIcon, title: "Virtual Cards", desc: "Generate secure, single-use cards for safer online shopping.", features: ["Instant issuance", "Set specific spending limits", "Freeze or delete anytime"] }
-             ].map((prod, idx) => (
-               <motion.div key={idx} variants={fadeInUp} whileHover={{ y: -10 }} className="h-full">
-                 <Card className="h-full bg-gradient-to-br from-blue-700 to-blue-900 text-white border-none hover:shadow-[0_10px_40px_rgba(59,130,246,0.3)] cursor-pointer overflow-hidden relative group">
-                   <div className="absolute top-0 right-0 w-40 h-40 bg-white/10 rounded-full blur-[60px] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                   <CardHeader>
-                     <div className="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center mb-6 transform group-hover:scale-110 transition-transform duration-300 shadow-inner">
-                       <prod.icon className="w-8 h-8 text-white" />
-                     </div>
-                     <CardTitle className="text-xl font-bold relative z-10 text-white">{prod.title}</CardTitle>
-                   </CardHeader>
-                   <CardContent className="relative z-10">
-                     <p className="text-sm text-blue-100 mb-6">{prod.desc}</p>
-                     <ul className="space-y-3 text-sm text-blue-50 font-medium">
-                       {prod.features.map((f, i) => (
-                         <li key={i} className="flex items-center gap-2">✓ {f}</li>
-                       ))}
-                     </ul>
-                   </CardContent>
-                 </Card>
-               </motion.div>
-             ))}
+            {[
+              { icon: Wallet, title: "First Monument Bank Checking", desc: "A modern checking account that actually works for you.", features: ["No overdraft fees", "Get paid up to 2 days early", "Instantly send money to friends"] },
+              { icon: PiggyBank, title: "High-Yield Savings", desc: "Earn more on your money with industry-leading rates.", features: ["4.50% Annual Percentage Yield", "No minimum balance to open", "Automated savings rules"] },
+              { icon: CreditCardIcon, title: "Virtual Cards", desc: "Generate secure, single-use cards for safer online shopping.", features: ["Instant issuance", "Set specific spending limits", "Freeze or delete anytime"] }
+            ].map((prod, idx) => (
+              <motion.div key={idx} variants={fadeInUp} whileHover={{ y: -10 }} className="h-full">
+                <Card className="h-full bg-gradient-to-br from-blue-700 to-blue-900 text-white border-none hover:shadow-[0_10px_40px_rgba(59,130,246,0.3)] cursor-pointer overflow-hidden relative group">
+                  <div className="absolute top-0 right-0 w-40 h-40 bg-white/10 rounded-full blur-[60px] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <CardHeader>
+                    <div className="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center mb-6 transform group-hover:scale-110 transition-transform duration-300 shadow-inner">
+                      <prod.icon className="w-8 h-8 text-white" />
+                    </div>
+                    <CardTitle className="text-xl font-bold relative z-10 text-white">{prod.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent className="relative z-10">
+                    <p className="text-sm text-blue-100 mb-6">{prod.desc}</p>
+                    <ul className="space-y-3 text-sm text-blue-50 font-medium">
+                      {prod.features.map((f, i) => (
+                        <li key={i} className="flex items-center gap-2">✓ {f}</li>
+                      ))}
+                    </ul>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
           </motion.div>
         </div>
       </section>
@@ -204,7 +204,7 @@ export function Home() {
       {/* 4. Security & Policies */}
       <section className="w-full py-24 px-4 bg-[rgba(255,255,255,0.01)] border-b border-[var(--color-bank-border)] overflow-hidden">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -233,7 +233,7 @@ export function Home() {
               ))}
             </div>
           </motion.div>
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -241,16 +241,16 @@ export function Home() {
             className="flex-1 w-full max-w-md"
           >
             <Card className="bg-blue-800 p-6 md:p-8 shadow-2xl relative overflow-hidden group border-none">
-               <motion.div 
-                 animate={{ rotate: 360 }}
-                 transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
-                 className="absolute top-[-20%] right-[-10%] p-6 md:p-8 opacity-10 text-white"
-               >
-                 <ShieldCheck className="w-64 h-64" />
-               </motion.div>
-               <h3 className="text-xl md:text-2xl font-bold text-white mb-4 relative z-10">Protecting your wealth is our #1 priority.</h3>
-               <p className="text-blue-100 text-sm mb-8 relative z-10 leading-relaxed">Read our comprehensive security policy to learn how we safeguard your financial future with enterprise encryption and 24/7 fraud monitoring.</p>
-               <Button className="relative z-10 bg-white text-blue-800 hover:bg-slate-100 border-none shadow-sm" onClick={() => navigate('/security')}>Read Security Policy</Button>
+              <motion.div
+                animate={{ rotate: 360 }}
+                transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
+                className="absolute top-[-20%] right-[-10%] p-6 md:p-8 opacity-10 text-white"
+              >
+                <ShieldCheck className="w-64 h-64" />
+              </motion.div>
+              <h3 className="text-xl md:text-2xl font-bold text-white mb-4 relative z-10">Protecting your wealth is our #1 priority.</h3>
+              <p className="text-blue-100 text-sm mb-8 relative z-10 leading-relaxed">Read our comprehensive security policy to learn how we safeguard your financial future with enterprise encryption and 24/7 fraud monitoring.</p>
+              <Button className="relative z-10 bg-white text-blue-800 hover:bg-slate-100 border-none shadow-sm" onClick={() => navigate('/security')}>Read Security Policy</Button>
             </Card>
           </motion.div>
         </div>
@@ -259,7 +259,7 @@ export function Home() {
       {/* 5. Testimonials */}
       <section className="w-full py-24 px-4 border-b border-[var(--color-bank-border)] overflow-hidden">
         <div className="max-w-7xl mx-auto">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -268,7 +268,7 @@ export function Home() {
             <h2 className="text-xl md:text-2xl lg:text-3xl font-bold mb-3">Loved by millions</h2>
             <p className="text-sm md:text-base text-[var(--color-bank-text-muted)] max-w-2xl mx-auto">Don't just take our word for it. See what our customers are saying.</p>
           </motion.div>
-          <motion.div 
+          <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
@@ -307,7 +307,7 @@ export function Home() {
       <section className="w-full pt-24 pb-32 px-4 sm:px-6 lg:px-8 relative bg-cover bg-center bg-no-repeat bg-fixed" style={{ backgroundImage: "url('/images/bento-bg.png')" }}>
         <div className="absolute inset-0 bg-[var(--color-bank-bg)]/40 backdrop-blur-sm"></div>
         <div className="max-w-6xl mx-auto relative z-10">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -319,7 +319,7 @@ export function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 md:auto-rows-[260px]">
             {/* Box 1: Premier Checking */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -327,14 +327,14 @@ export function Home() {
               className="md:col-span-2 md:row-span-2 rounded-3xl bg-blue-900 p-6 md:p-8 relative overflow-hidden flex flex-col justify-between group cursor-pointer shadow-xl border-none"
               onClick={() => navigate('/open-account')}
             >
-              <motion.div 
+              <motion.div
                 animate={{ rotate: 360 }}
                 transition={{ duration: 50, repeat: Infinity, ease: "linear" }}
                 className="absolute top-[-30%] right-[-10%] p-6 md:p-8 opacity-10 text-white pointer-events-none"
               >
                 <CreditCardIcon className="w-96 h-96" />
               </motion.div>
-              
+
               {/* Badge */}
               <div className="absolute top-8 right-8 border border-white/30 text-white text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1 backdrop-blur-md">
                 <Zap className="w-3 h-3 text-yellow-400" fill="currentColor" /> MOST POPULAR
@@ -346,7 +346,7 @@ export function Home() {
                 </div>
                 <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-3">First Monument Bank Premier Checking</h3>
                 <p className="text-blue-100 text-base max-w-md leading-relaxed mb-6">Experience elite banking with our flagship account. Designed for high-volume transactors who demand priority service.</p>
-                
+
                 {/* Feature List */}
                 <ul className="space-y-3">
                   <li className="flex items-center text-sm text-blue-50 font-medium">
@@ -366,7 +366,7 @@ export function Home() {
             </motion.div>
 
             {/* Box 2: High-Yield Savings */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -375,40 +375,40 @@ export function Home() {
               className="md:col-span-1 md:row-span-2 rounded-3xl bg-emerald-800 p-6 md:p-8 relative overflow-hidden flex flex-col justify-between group cursor-pointer shadow-xl border-none"
               onClick={() => navigate('/open-account')}
             >
-               <motion.div 
-                 animate={{ rotate: -360 }}
-                 transition={{ duration: 45, repeat: Infinity, ease: "linear" }}
-                 className="absolute bottom-[-10%] right-[-20%] p-6 md:p-8 opacity-10 text-white pointer-events-none"
-               >
-                 <PiggyBank className="w-64 h-64" />
-               </motion.div>
+              <motion.div
+                animate={{ rotate: -360 }}
+                transition={{ duration: 45, repeat: Infinity, ease: "linear" }}
+                className="absolute bottom-[-10%] right-[-20%] p-6 md:p-8 opacity-10 text-white pointer-events-none"
+              >
+                <PiggyBank className="w-64 h-64" />
+              </motion.div>
 
-               <div className="relative z-10">
-                 <div className="flex justify-between items-start mb-6">
-                   <div className="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center backdrop-blur-sm">
-                     <PiggyBank className="w-7 h-7 text-white" />
-                   </div>
-                   <div className="text-white text-[10px] font-bold px-2 py-1 rounded bg-white/20 backdrop-blur-sm">FDIC INSURED</div>
-                 </div>
-                 <h3 className="text-base md:text-lg md:text-xl font-bold text-white mb-3">High-Yield Savings</h3>
-                 <p className="text-emerald-50 text-sm leading-relaxed mb-6">Make your money work harder. Earn market-leading rates with auto-save features and zero minimum balance.</p>
-                 
-                 {/* Micro Chart */}
-                 <div className="flex items-end gap-2 h-20 mb-4 border-b border-white/20 pb-2">
-                   <div className="w-1/3 bg-white/30 rounded-t-sm h-1/4 relative group-hover:bg-white/40 transition-colors"><span className="absolute -top-5 left-1/2 -translate-x-1/2 text-[10px] text-emerald-100">Nat'l Avg</span></div>
-                   <div className="w-1/3 bg-white rounded-t-sm h-full relative">
-                     <div className="absolute -top-7 left-1/2 -translate-x-1/2 text-white text-[10px] font-bold px-2 py-1 rounded bg-emerald-600 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity">5.25%</div>
-                   </div>
-                 </div>
-               </div>
-               <div className="mt-2 relative z-10">
-                 <span className="text-2xl md:text-3xl md:text-4xl md:text-5xl font-black text-white tracking-tighter">5.25%</span>
-                 <span className="text-sm text-emerald-100 ml-1 font-medium">APY</span>
-               </div>
+              <div className="relative z-10">
+                <div className="flex justify-between items-start mb-6">
+                  <div className="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center backdrop-blur-sm">
+                    <PiggyBank className="w-7 h-7 text-white" />
+                  </div>
+                  <div className="text-white text-[10px] font-bold px-2 py-1 rounded bg-white/20 backdrop-blur-sm">FDIC INSURED</div>
+                </div>
+                <h3 className="text-base md:text-lg md:text-xl font-bold text-white mb-3">High-Yield Savings</h3>
+                <p className="text-emerald-50 text-sm leading-relaxed mb-6">Make your money work harder. Earn market-leading rates with auto-save features and zero minimum balance.</p>
+
+                {/* Micro Chart */}
+                <div className="flex items-end gap-2 h-20 mb-4 border-b border-white/20 pb-2">
+                  <div className="w-1/3 bg-white/30 rounded-t-sm h-1/4 relative group-hover:bg-white/40 transition-colors"><span className="absolute -top-5 left-1/2 -translate-x-1/2 text-[10px] text-emerald-100">Nat'l Avg</span></div>
+                  <div className="w-1/3 bg-white rounded-t-sm h-full relative">
+                    <div className="absolute -top-7 left-1/2 -translate-x-1/2 text-white text-[10px] font-bold px-2 py-1 rounded bg-emerald-600 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity">5.25%</div>
+                  </div>
+                </div>
+              </div>
+              <div className="mt-2 relative z-10">
+                <span className="text-2xl md:text-3xl md:text-4xl md:text-5xl font-black text-white tracking-tighter">5.25%</span>
+                <span className="text-sm text-emerald-100 ml-1 font-medium">APY</span>
+              </div>
             </motion.div>
 
             {/* Box 3: Credit Cards */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -417,33 +417,33 @@ export function Home() {
               className="md:col-span-1 md:row-span-1 rounded-3xl bg-slate-900 p-6 relative overflow-hidden group cursor-pointer flex flex-col justify-center shadow-xl border-none"
               onClick={() => navigate('/open-account')}
             >
-               <motion.div 
-                 animate={{ rotate: 360 }}
-                 transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
-                 className="absolute right-[-10%] bottom-[-10%] p-6 md:p-8 opacity-10 text-white pointer-events-none"
-               >
-                 <ShieldCheck className="w-48 h-48" />
-               </motion.div>
+              <motion.div
+                animate={{ rotate: 360 }}
+                transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
+                className="absolute right-[-10%] bottom-[-10%] p-6 md:p-8 opacity-10 text-white pointer-events-none"
+              >
+                <ShieldCheck className="w-48 h-48" />
+              </motion.div>
 
-               <div className="relative z-10">
-                 <div className="flex justify-between items-center mb-4">
-                   <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center shrink-0 backdrop-blur-sm">
-                     <ShieldCheck className="w-6 h-6 text-white" />
-                   </div>
-                   <span className="text-white text-[10px] font-bold px-2 py-1 rounded border border-white/30 backdrop-blur-sm bg-white/10">NEW REWARDS</span>
-                 </div>
-                 <h3 className="text-base md:text-lg font-bold text-white mb-2">Elite Rewards Cards</h3>
-                 <div className="flex items-center gap-2 mb-1">
-                   <span className="text-white font-bold">3%</span> <span className="text-sm text-slate-300">Travel & Dining</span>
-                 </div>
-                 <div className="flex items-center gap-2">
-                   <span className="text-white font-bold">2%</span> <span className="text-sm text-slate-300">Everything Else</span>
-                 </div>
-               </div>
+              <div className="relative z-10">
+                <div className="flex justify-between items-center mb-4">
+                  <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center shrink-0 backdrop-blur-sm">
+                    <ShieldCheck className="w-6 h-6 text-white" />
+                  </div>
+                  <span className="text-white text-[10px] font-bold px-2 py-1 rounded border border-white/30 backdrop-blur-sm bg-white/10">NEW REWARDS</span>
+                </div>
+                <h3 className="text-base md:text-lg font-bold text-white mb-2">Elite Rewards Cards</h3>
+                <div className="flex items-center gap-2 mb-1">
+                  <span className="text-white font-bold">3%</span> <span className="text-sm text-slate-300">Travel & Dining</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="text-white font-bold">2%</span> <span className="text-sm text-slate-300">Everything Else</span>
+                </div>
+              </div>
             </motion.div>
 
             {/* Box 4: Wealth Management */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -451,27 +451,27 @@ export function Home() {
               whileHover={{ scale: 0.98, transition: { type: "spring", stiffness: 400, damping: 20 } }}
               className="md:col-span-1 md:row-span-1 rounded-3xl bg-white p-6 relative overflow-hidden group cursor-pointer flex flex-col justify-center shadow-xl border border-slate-200"
             >
-               <motion.div 
-                 animate={{ rotate: -360 }}
-                 transition={{ duration: 50, repeat: Infinity, ease: "linear" }}
-                 className="absolute right-[-20%] bottom-[-30%] opacity-[0.03] text-blue-600 pointer-events-none"
-               >
-                 <BarChart3 className="w-48 h-48" />
-               </motion.div>
-               <div className="relative z-10">
-                 <div className="flex justify-between items-center mb-4">
-                   <div className="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center">
-                     <TrendingUp className="w-5 h-5 text-blue-600" />
-                   </div>
-                   <span className="bg-blue-100 text-blue-800 text-[10px] font-bold px-2 py-1 rounded">0.25% FEE</span>
-                 </div>
-                 <h3 className="text-base md:text-lg font-bold text-slate-900 mb-2">Wealth Management</h3>
-                 <p className="text-sm text-slate-600 leading-relaxed">Automated robo-advisors or dedicated human financial planners.</p>
-               </div>
+              <motion.div
+                animate={{ rotate: -360 }}
+                transition={{ duration: 50, repeat: Infinity, ease: "linear" }}
+                className="absolute right-[-20%] bottom-[-30%] opacity-[0.03] text-blue-600 pointer-events-none"
+              >
+                <BarChart3 className="w-48 h-48" />
+              </motion.div>
+              <div className="relative z-10">
+                <div className="flex justify-between items-center mb-4">
+                  <div className="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center">
+                    <TrendingUp className="w-5 h-5 text-blue-600" />
+                  </div>
+                  <span className="bg-blue-100 text-blue-800 text-[10px] font-bold px-2 py-1 rounded">0.25% FEE</span>
+                </div>
+                <h3 className="text-base md:text-lg font-bold text-slate-900 mb-2">Wealth Management</h3>
+                <p className="text-sm text-slate-600 leading-relaxed">Automated robo-advisors or dedicated human financial planners.</p>
+              </div>
             </motion.div>
 
             {/* Box 5: Wealth Management (Wide) */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -479,31 +479,31 @@ export function Home() {
               whileHover={{ scale: 0.98, transition: { type: "spring", stiffness: 400, damping: 20 } }}
               className="md:col-span-2 lg:col-span-4 md:row-span-1 rounded-3xl bg-slate-900 border-none p-6 md:p-8 relative overflow-hidden group flex flex-col md:flex-row items-start md:items-center justify-between gap-8 shadow-xl"
             >
-               <motion.div 
-                 animate={{ rotate: 360 }}
-                 transition={{ duration: 70, repeat: Infinity, ease: "linear" }}
-                 className="absolute left-[-5%] top-[-50%] p-6 md:p-8 opacity-5 text-emerald-400 pointer-events-none"
-               >
-                 <TrendingUp className="w-96 h-96" />
-               </motion.div>
-               
-               <div className="flex items-center gap-6 relative z-10 flex-1">
-                 <div className="w-16 h-16 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center shrink-0 backdrop-blur-sm">
-                   <TrendingUp className="w-8 h-8 text-emerald-400" />
-                 </div>
-                 <div>
-                   <h3 className="text-base md:text-lg md:text-xl lg:text-2xl font-bold text-white mb-2">Wealth Management & Investing</h3>
-                   <div className="flex flex-wrap gap-3 mb-3">
-                     <span className="text-emerald-100 text-xs font-medium px-3 py-1 rounded-full border border-emerald-500/30 bg-emerald-500/10">Expert Advisors</span>
-                     <span className="text-emerald-100 text-xs font-medium px-3 py-1 rounded-full border border-emerald-500/30 bg-emerald-500/10">$0 Commission Trades</span>
-                   </div>
-                   <p className="text-sm text-slate-300 max-w-xl leading-relaxed">Build and preserve your wealth with our cutting-edge <span className="text-emerald-400 font-bold">intelligent portfolios</span> tailored for you.</p>
-                 </div>
-               </div>
+              <motion.div
+                animate={{ rotate: 360 }}
+                transition={{ duration: 70, repeat: Infinity, ease: "linear" }}
+                className="absolute left-[-5%] top-[-50%] p-6 md:p-8 opacity-5 text-emerald-400 pointer-events-none"
+              >
+                <TrendingUp className="w-96 h-96" />
+              </motion.div>
 
-               <div className="flex flex-col sm:flex-row w-full md:w-auto shrink-0 relative z-10 gap-3">
-                 <Button className="bg-emerald-600 hover:bg-emerald-500 text-white shadow-[0_0_20px_rgba(16,185,129,0.3)] border-none px-8 font-bold" onClick={() => navigate('/open-account')}>Open an Account</Button>
-               </div>
+              <div className="flex items-center gap-6 relative z-10 flex-1">
+                <div className="w-16 h-16 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center shrink-0 backdrop-blur-sm">
+                  <TrendingUp className="w-8 h-8 text-emerald-400" />
+                </div>
+                <div>
+                  <h3 className="text-base md:text-lg md:text-xl lg:text-2xl font-bold text-white mb-2">Wealth Management & Investing</h3>
+                  <div className="flex flex-wrap gap-3 mb-3">
+                    <span className="text-emerald-100 text-xs font-medium px-3 py-1 rounded-full border border-emerald-500/30 bg-emerald-500/10">Expert Advisors</span>
+                    <span className="text-emerald-100 text-xs font-medium px-3 py-1 rounded-full border border-emerald-500/30 bg-emerald-500/10">$0 Commission Trades</span>
+                  </div>
+                  <p className="text-sm text-slate-300 max-w-xl leading-relaxed">Build and preserve your wealth with our cutting-edge <span className="text-emerald-400 font-bold">intelligent portfolios</span> tailored for you.</p>
+                </div>
+              </div>
+
+              <div className="flex flex-col sm:flex-row w-full md:w-auto shrink-0 relative z-10 gap-3">
+                <Button className="bg-emerald-600 hover:bg-emerald-500 text-white shadow-[0_0_20px_rgba(16,185,129,0.3)] border-none px-8 font-bold" onClick={() => navigate('/open-account')}>Open an Account</Button>
+              </div>
             </motion.div>
           </div>
         </div>
@@ -518,7 +518,7 @@ export function Home() {
               <p className="text-sm text-slate-600 max-w-2xl">Expert analysis, market updates, and educational resources to help you make informed financial decisions.</p>
             </div>
           </div>
-          
+
           <div className="grid md:grid-cols-3 gap-8">
             {[
               { category: "Market Update", date: "Oct 24, 2026", title: "Federal Reserve holds rates steady: What it means for your savings", img: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=800&q=80" },
@@ -540,7 +540,7 @@ export function Home() {
         </div>
       </section>
       {/* NEW: Business Banking Teaser */}
-      <section 
+      <section
         className="w-full py-24 px-4 bg-slate-900 text-white relative overflow-hidden bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: "url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=2000&q=80')" }}
       >
@@ -562,13 +562,13 @@ export function Home() {
             </Button>
           </div>
           <div className="flex-1 w-full max-w-lg">
-             <div className="bg-slate-800 border border-slate-700 p-6 md:p-8 rounded-3xl relative shadow-2xl">
-               <div className="absolute -top-4 -right-4 w-20 h-20 bg-blue-500/20 rounded-full blur-2xl pointer-events-none"></div>
-               <Building className="w-12 h-12 text-blue-400 mb-6" />
-               <h3 className="text-2xl font-bold mb-2">Dedicated Relationship Managers</h3>
-               <p className="text-slate-400 mb-6 text-sm leading-relaxed">Every business client gets a dedicated local expert who understands your industry and your unique financial needs.</p>
-               <a href="/contact" className="text-blue-400 hover:text-blue-300 text-sm font-bold flex items-center cursor-pointer transition-colors">Connect with a Banker <ChevronRight className="w-4 h-4 ml-1" /></a>
-             </div>
+            <div className="bg-slate-800 border border-slate-700 p-6 md:p-8 rounded-3xl relative shadow-2xl">
+              <div className="absolute -top-4 -right-4 w-20 h-20 bg-blue-500/20 rounded-full blur-2xl pointer-events-none"></div>
+              <Building className="w-12 h-12 text-blue-400 mb-6" />
+              <h3 className="text-2xl font-bold mb-2">Dedicated Relationship Managers</h3>
+              <p className="text-slate-400 mb-6 text-sm leading-relaxed">Every business client gets a dedicated local expert who understands your industry and your unique financial needs.</p>
+              <a href="/contact" className="text-blue-400 hover:text-blue-300 text-sm font-bold flex items-center cursor-pointer transition-colors">Connect with a Banker <ChevronRight className="w-4 h-4 ml-1" /></a>
+            </div>
           </div>
         </div>
       </section>
@@ -577,13 +577,13 @@ export function Home() {
       <section className="w-full py-20 px-4  border-y border-[var(--color-bank-border)]">
         <div className="max-w-7xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full  text-emerald-800 text-xs font-bold mb-6 uppercase tracking-wider">
-             Our Commitment
+            Our Commitment
           </div>
           <h2 className="text-2xl md:text-3xl md:text-4xl font-bold text-slate-900 mb-4">Banking for a better world.</h2>
           <p className="text-base md:text-lg text-slate-600 max-w-2xl mx-auto mb-16">
             We measure our success not just by our balance sheet, but by our positive impact on the communities we serve and the environment we all share.
           </p>
-          
+
           <div className="grid md:grid-cols-3 gap-8 text-left">
             <div className="bg-white p-6 md:p-8 rounded-3xl border border-slate-200 shadow-sm">
               <span className="text-2xl md:text-3xl md:text-4xl font-black text-emerald-600 mb-2 block">$5B+</span>
@@ -612,34 +612,34 @@ export function Home() {
         <div className="max-w-7xl mx-auto">
           <p className="text-center text-sm font-bold text-slate-400 uppercase tracking-widest mb-8">Recognized for Excellence</p>
           <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16">
-             <div className="text-center group cursor-default transition-all duration-300 hover:-translate-y-2">
-               <div className="w-16 h-16 mx-auto mb-3 rounded-full bg-yellow-50 flex items-center justify-center group-hover:bg-yellow-100 group-hover:shadow-[0_0_20px_rgba(234,179,8,0.3)] transition-all duration-300">
-                 <Star className="w-8 h-8 text-yellow-500 group-hover:scale-110 transition-transform duration-300" fill="currentColor" />
-               </div>
-               <p className="text-sm font-black text-slate-900">#1 Digital Banking App</p>
-               <p className="text-xs font-bold text-slate-600">J.D. Power 2026</p>
-             </div>
-             <div className="text-center group cursor-default transition-all duration-300 hover:-translate-y-2">
-               <div className="w-16 h-16 mx-auto mb-3 rounded-full bg-blue-50 flex items-center justify-center group-hover:bg-blue-100 group-hover:shadow-[0_0_20px_rgba(59,130,246,0.3)] transition-all duration-300">
-                 <ShieldCheck className="w-8 h-8 text-blue-600 group-hover:scale-110 transition-transform duration-300" />
-               </div>
-               <p className="text-sm font-black text-slate-900">Best Bank for Security</p>
-               <p className="text-xs font-bold text-slate-600">Forbes 2026</p>
-             </div>
-             <div className="text-center group cursor-default transition-all duration-300 hover:-translate-y-2">
-               <div className="w-16 h-16 mx-auto mb-3 rounded-full bg-slate-100 flex items-center justify-center group-hover:bg-slate-200 group-hover:shadow-[0_0_20px_rgba(71,85,105,0.3)] transition-all duration-300">
-                 <Building className="w-8 h-8 text-slate-700 group-hover:scale-110 transition-transform duration-300" />
-               </div>
-               <p className="text-sm font-black text-slate-900">Top 10 Wealth Managers</p>
-               <p className="text-xs font-bold text-slate-600">Barron's 2026</p>
-             </div>
-             <div className="text-center hidden sm:block group cursor-default transition-all duration-300 hover:-translate-y-2">
-               <div className="w-16 h-16 mx-auto mb-3 rounded-full bg-emerald-50 flex items-center justify-center group-hover:bg-emerald-100 group-hover:shadow-[0_0_20px_rgba(16,185,129,0.3)] transition-all duration-300">
-                 <Globe className="w-8 h-8 text-emerald-600 group-hover:scale-110 transition-transform duration-300" />
-               </div>
-               <p className="text-sm font-black text-slate-900">Most Ethical Companies</p>
-               <p className="text-xs font-bold text-slate-600">Ethisphere 2026</p>
-             </div>
+            <div className="text-center group cursor-default transition-all duration-300 hover:-translate-y-2">
+              <div className="w-16 h-16 mx-auto mb-3 rounded-full bg-yellow-50 flex items-center justify-center group-hover:bg-yellow-100 group-hover:shadow-[0_0_20px_rgba(234,179,8,0.3)] transition-all duration-300">
+                <Star className="w-8 h-8 text-yellow-500 group-hover:scale-110 transition-transform duration-300" fill="currentColor" />
+              </div>
+              <p className="text-sm font-black text-slate-900">#1 Digital Banking App</p>
+              <p className="text-xs font-bold text-slate-600">J.D. Power 2026</p>
+            </div>
+            <div className="text-center group cursor-default transition-all duration-300 hover:-translate-y-2">
+              <div className="w-16 h-16 mx-auto mb-3 rounded-full bg-blue-50 flex items-center justify-center group-hover:bg-blue-100 group-hover:shadow-[0_0_20px_rgba(59,130,246,0.3)] transition-all duration-300">
+                <ShieldCheck className="w-8 h-8 text-blue-600 group-hover:scale-110 transition-transform duration-300" />
+              </div>
+              <p className="text-sm font-black text-slate-900">Best Bank for Security</p>
+              <p className="text-xs font-bold text-slate-600">Forbes 2026</p>
+            </div>
+            <div className="text-center group cursor-default transition-all duration-300 hover:-translate-y-2">
+              <div className="w-16 h-16 mx-auto mb-3 rounded-full bg-slate-100 flex items-center justify-center group-hover:bg-slate-200 group-hover:shadow-[0_0_20px_rgba(71,85,105,0.3)] transition-all duration-300">
+                <Building className="w-8 h-8 text-slate-700 group-hover:scale-110 transition-transform duration-300" />
+              </div>
+              <p className="text-sm font-black text-slate-900">Top 10 Wealth Managers</p>
+              <p className="text-xs font-bold text-slate-600">Barron's 2026</p>
+            </div>
+            <div className="text-center hidden sm:block group cursor-default transition-all duration-300 hover:-translate-y-2">
+              <div className="w-16 h-16 mx-auto mb-3 rounded-full bg-emerald-50 flex items-center justify-center group-hover:bg-emerald-100 group-hover:shadow-[0_0_20px_rgba(16,185,129,0.3)] transition-all duration-300">
+                <Globe className="w-8 h-8 text-emerald-600 group-hover:scale-110 transition-transform duration-300" />
+              </div>
+              <p className="text-sm font-black text-slate-900">Most Ethical Companies</p>
+              <p className="text-xs font-bold text-slate-600">Ethisphere 2026</p>
+            </div>
           </div>
         </div>
       </section>
@@ -676,14 +676,14 @@ export function Home() {
       {/* Article Modal */}
       {selectedArticle && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/80 backdrop-blur-sm" onClick={() => setSelectedArticle(null)}>
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, scale: 0.95, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 20 }}
             onClick={(e) => e.stopPropagation()}
             className="bg-white w-full max-w-2xl max-h-[90vh] overflow-y-auto rounded-3xl shadow-2xl flex flex-col relative"
           >
-            <button 
+            <button
               onClick={() => setSelectedArticle(null)}
               aria-label="Close article"
               className="absolute top-4 right-4 w-10 h-10 bg-black/50 hover:bg-black/70 text-white rounded-full flex items-center justify-center transition-colors z-10 text-2xl pb-1"
@@ -703,9 +703,9 @@ export function Home() {
             </div>
             <div className="p-6 md:p-8">
               <p className="text-slate-600 leading-relaxed mb-6">
-                This is a detailed analysis regarding <strong>{selectedArticle.title.toLowerCase()}</strong>. 
-                At First Monument Bank, we strive to provide our clients with the most up-to-date and 
-                actionable insights to help you navigate an ever-changing economic landscape. 
+                This is a detailed analysis regarding <strong>{selectedArticle.title.toLowerCase()}</strong>.
+                At First Monument Bank, we strive to provide our clients with the most up-to-date and
+                actionable insights to help you navigate an ever-changing economic landscape.
               </p>
               <h4 className="text-base md:text-lg font-bold text-slate-900 mb-3">Key Takeaways</h4>
               <ul className="list-disc pl-5 space-y-2 text-slate-600 mb-6">
@@ -714,7 +714,7 @@ export function Home() {
                 <li>Consult with our expert advisors for personalized recommendations.</li>
               </ul>
               <p className="text-slate-600 leading-relaxed mb-8">
-                For a complete and tailored breakdown of how this impacts your personal or business portfolio, 
+                For a complete and tailored breakdown of how this impacts your personal or business portfolio,
                 please reach out to your dedicated Relationship Manager or visit one of our branches.
               </p>
               <Button className="w-full bg-blue-700 hover:bg-blue-600 text-white border-none" onClick={() => setSelectedArticle(null)}>Close Article</Button>

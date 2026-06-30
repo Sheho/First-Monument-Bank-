@@ -41,14 +41,14 @@ export function Login() {
       <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px]  rounded-full blur-3xl opacity-50 pointer-events-none animate-pulse" style={{ animationDuration: '4s' }}></div>
       <div className="absolute bottom-1/4 right-1/4 w-[600px] h-[600px]  rounded-full blur-3xl opacity-50 pointer-events-none animate-pulse" style={{ animationDuration: '6s', animationDelay: '1s' }}></div>
 
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, scale: 0.95, y: 20 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
         className="w-full max-w-md relative z-10"
       >
         <div className=" backdrop-blur-2xl border border-[var(--color-bank-border)] shadow-2xl rounded-3xl p-6 md:p-8 sm:p-10">
-          
+
           <div className="flex flex-col items-center mb-8 text-center">
             <Link to="/" className="flex items-center justify-center w-14 h-14 bg-transparent mb-4 transition-all hover:scale-105">
               <img src="/fmb_logo.png" alt="First Monument Bank" className="w-14 h-14 object-contain " />
@@ -136,7 +136,7 @@ export function Login() {
           <div className="mt-8 text-center border-t border-[var(--color-bank-border)] pt-6">
             <p className="text-sm text-[var(--color-bank-text-muted)]">
               Don't have an account yet?{" "}
-              <Link to="/open-account" className="font-semibold text-blue-600 hover:text-blue-600 transition-colors">
+              <Link to="https://account.firstmonument.com/register" className="font-semibold text-blue-600 hover:text-blue-600 transition-colors">
                 Open an Account
               </Link>
             </p>

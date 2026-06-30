@@ -40,7 +40,7 @@ export function CheckingAccounts() {
         <div className="absolute inset-0 opacity-20 pointer-events-none" style={{ backgroundImage: 'radial-gradient(circle, #3b82f6 1.5px, transparent 1.5px)', backgroundSize: '30px 30px' }}></div>
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-400/20 rounded-full blur-3xl opacity-50 pointer-events-none -mt-40 -mr-40"></div>
         <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-indigo-400/20 rounded-full blur-3xl opacity-50 pointer-events-none -mb-40 -ml-40"></div>
-        
+
         <div className="max-w-7xl mx-auto text-center relative z-10">
           <motion.div
             initial="hidden"
@@ -51,24 +51,24 @@ export function CheckingAccounts() {
             <motion.div variants={fadeInUp} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-100 text-blue-700 font-bold text-sm mb-8 shadow-sm">
               <CheckCircle2 className="w-4 h-4" /> Everyday & Premium Checking
             </motion.div>
-            
+
             <motion.h1 variants={fadeInUp} className="text-4xl md:text-5xl lg:text-4xl md:text-5xl lg:text-7xl font-black tracking-tight mb-6 text-slate-900">
               Checking accounts that fit your <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-indigo-600">life</span>.
             </motion.h1>
-            
+
             <motion.p variants={fadeInUp} className="text-base md:text-xl text-slate-600 max-w-2xl mx-auto mb-10 leading-relaxed">
               Access your money on your terms with over 15,000 ATMs and nearly 4,700 branches nationwide. Enjoy industry-leading digital tools like remote check deposit and seamless Zelle® transfers.
             </motion.p>
-            
+
             <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white shadow-lg shadow-blue-500/30 font-bold px-8 py-6 text-lg" onClick={() => navigate("/open-account")}>
+              <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white shadow-lg shadow-blue-500/30 font-bold px-8 py-6 text-lg" onClick={() => navigate("https://account.firstmonument.com/register")}>
                 Find Your Account
               </Button>
               <Button size="lg" variant="outline" className="border-slate-300 text-slate-700 hover:bg-slate-100 font-bold px-8 py-6 text-lg" onClick={() => navigate("/compare")}>
                 Compare Features
               </Button>
             </motion.div>
-            
+
             {/* Trust Indicators */}
             <motion.div variants={fadeInUp} className="mt-16 pt-8 border-t border-slate-200/60 max-w-3xl mx-auto flex flex-wrap justify-center gap-8 md:gap-16">
               <div className="flex flex-col items-center">
@@ -119,7 +119,7 @@ export function CheckingAccounts() {
                     <li className="flex items-start text-sm text-slate-600"><CheckCircle2 className="w-4 h-4 text-blue-600 mr-2 mt-0.5 flex-shrink-0" /> No fees on incoming or outgoing wire transfers</li>
                     <li className="flex items-start text-sm text-slate-600"><CheckCircle2 className="w-4 h-4 text-blue-600 mr-2 mt-0.5 flex-shrink-0" /> Avoid the $35 monthly fee with $75K+ in linked deposits/investments</li>
                   </ul>
-                  <Button className="bg-blue-600 hover:bg-blue-700 text-white shadow-md transform hover:scale-105 transition-transform" onClick={() => navigate("/open-account")}>
+                  <Button className="bg-blue-600 hover:bg-blue-700 text-white shadow-md transform hover:scale-105 transition-transform" onClick={() => navigate("https://account.firstmonument.com/register")}>
                     Open Premier Account
                   </Button>
                 </CardContent>
@@ -146,7 +146,7 @@ export function CheckingAccounts() {
                     <li className="flex items-start text-sm text-slate-600"><CheckCircle2 className="w-4 h-4 text-blue-400 mr-2 mt-0.5 flex-shrink-0" /> Send and receive money in moments with Zelle®</li>
                     <li className="flex items-start text-sm text-slate-600"><CheckCircle2 className="w-4 h-4 text-blue-400 mr-2 mt-0.5 flex-shrink-0" /> 24/7 fraud monitoring and Zero Liability Protection</li>
                   </ul>
-                  <Button variant="outline" className="border-blue-200 text-blue-600 hover:bg-blue-50 transform hover:scale-105 transition-transform" onClick={() => navigate("/open-account")}>
+                  <Button variant="outline" className="border-blue-200 text-blue-600 hover:bg-blue-50 transform hover:scale-105 transition-transform" onClick={() => navigate("https://account.firstmonument.com/register")}>
                     Open Everyday Account
                   </Button>
                 </CardContent>
@@ -173,7 +173,7 @@ export function CheckingAccounts() {
                     <li className="flex items-start text-sm text-slate-600"><CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" /> Free access to credit score and financial education tools</li>
                     <li className="flex items-start text-sm text-slate-600"><CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" /> Seamless parent transfers via the mobile app</li>
                   </ul>
-                  <Button variant="outline" className="border-cyan-200 text-cyan-700 hover:bg-cyan-50 transform hover:scale-105 transition-transform" onClick={() => navigate("/open-account")}>
+                  <Button variant="outline" className="border-cyan-200 text-cyan-700 hover:bg-cyan-50 transform hover:scale-105 transition-transform" onClick={() => navigate("https://account.firstmonument.com/register")}>
                     Open Student Account
                   </Button>
                 </CardContent>
@@ -192,7 +192,7 @@ export function CheckingAccounts() {
             <img src="https://images.unsplash.com/photo-1639322537228-f710d846310a?auto=format&fit=crop&w=1200&q=80" alt="Abstract Background" loading="lazy" className="w-full h-full object-cover opacity-20" />
             <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/90 to-transparent"></div>
           </div>
-          
+
           <div className="relative z-10 grid md:grid-cols-2 gap-12 items-center">
             {/* Left: Content */}
             <div className="text-left">
@@ -205,7 +205,7 @@ export function CheckingAccounts() {
               <p className="text-slate-300 mb-8 text-base md:text-lg leading-relaxed">
                 Generate single-use or merchant-specific cards instantly to protect your real debit card numbers online. Pause, delete, or set limits with just one tap.
               </p>
-              
+
               <ul className="space-y-4 mb-10">
                 <li className="flex items-start text-slate-200">
                   <CheckCircle2 className="w-5 h-5 text-blue-400 mr-3 mt-0.5 shrink-0" />
@@ -225,14 +225,14 @@ export function CheckingAccounts() {
                 Learn More <ChevronRight className="w-5 h-5 ml-2" />
               </Button>
             </div>
-            
+
             {/* Right: Floating Card Animation */}
             <div className="relative h-[300px] md:h-full min-h-[350px] flex items-center justify-center">
               {/* Glowing Orb Behind Card */}
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-blue-500/30 rounded-full blur-[80px] animate-pulse duration-[4000ms]"></div>
-              
-              <motion.div 
-                animate={{ y: [-15, 15, -15], rotate: [-2, 2, -2] }} 
+
+              <motion.div
+                animate={{ y: [-15, 15, -15], rotate: [-2, 2, -2] }}
                 transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
                 className="w-full max-w-[320px] h-[200px] bg-gradient-to-br from-blue-600/80 to-cyan-500/80 backdrop-blur-xl border border-white/20 rounded-2xl shadow-2xl p-6 relative flex flex-col justify-between overflow-hidden"
               >
@@ -246,7 +246,7 @@ export function CheckingAccounts() {
                   </div>
                   <div className="text-white/80 font-bold italic tracking-wider">FMB Virtual</div>
                 </div>
-                
+
                 <div className="relative z-10">
                   <div className="font-mono text-white/90 text-xl tracking-[0.2em] mb-2 drop-shadow-md">
                     **** **** **** 4092
@@ -275,7 +275,7 @@ export function CheckingAccounts() {
             <h2 className="text-2xl md:text-3xl font-bold mb-4 text-slate-900">Compare Checking Accounts</h2>
             <p className="text-slate-600 max-w-2xl mx-auto">Review the details and fee structures of our checking accounts to find the one that best fits your financial life.</p>
           </div>
-          
+
           <div className="overflow-x-auto pb-6">
             <table className="w-full text-left border-collapse min-w-[800px]">
               <thead>
@@ -347,7 +347,7 @@ export function CheckingAccounts() {
           <div className="text-center mb-12">
             <h2 className="text-2xl md:text-3xl font-bold mb-4 text-slate-900">Frequently Asked Questions</h2>
           </div>
-          
+
           <div className="space-y-4">
             {[
               { q: "How do I waive the monthly service fee?", a: "For Total Checking, the $12 fee is waived if you receive $500 or more in qualifying electronic direct deposits during the statement period, or if you maintain a $1,500 minimum beginning day balance." },
@@ -356,7 +356,7 @@ export function CheckingAccounts() {
               { q: "Can I use Zelle® with these accounts?", a: "Yes. All First Monument Bank checking accounts include free access to Zelle® within the mobile app, allowing you to send and receive money with friends and family in minutes." }
             ].map((faq, i) => (
               <div key={i} className="bg-white border border-[var(--color-bank-border)] rounded-2xl overflow-hidden transition-all duration-300 shadow-sm hover:shadow-md">
-                <button 
+                <button
                   className="w-full px-6 py-4 flex items-center justify-between font-semibold text-slate-900 bg-white hover: transition-colors"
                   onClick={() => toggleFaq(i)}
                 >

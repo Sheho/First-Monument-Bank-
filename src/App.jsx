@@ -42,14 +42,14 @@ const LoadingFallback = () => (
   <div className="h-screen w-full flex flex-col items-center justify-center bg-[var(--color-bank-bg)] relative overflow-hidden">
     {/* Subtle animated background glow */}
     <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-900/10 via-transparent to-transparent animate-pulse duration-3000"></div>
-    
+
     <div className="relative z-10 flex flex-col items-center">
       {/* Outer pulsing ring */}
       <div className="relative flex items-center justify-center w-24 h-24 mb-8">
         <div className="absolute inset-0 border-2 border-blue-200/20 rounded-full animate-ping" style={{ animationDuration: '2s' }}></div>
         <div className="absolute inset-2 border-2 border-blue-400/30 rounded-full animate-spin" style={{ animationDuration: '3s' }}></div>
         <div className="absolute inset-4 border-t-2 border-blue-600 rounded-full animate-spin" style={{ animationDuration: '1.5s', animationDirection: 'reverse' }}></div>
-        
+
         {/* Center Logo */}
         <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(37,99,235,0.2)]">
           <img src="/fmb_logo.png" alt="FMB Loading" className="w-8 h-8 object-contain" />
@@ -79,12 +79,12 @@ function App() {
           {/* Public Routes */}
           <Route element={<MainLayout />}>
             <Route path="/" element={<Home />} />
-            <Route path="/login" element={<Login />} />
+            <Route path="https://account.firstmonument.com/login" element={<Login />} />
             <Route path="/checking" element={<CheckingAccounts />} />
             <Route path="/savings" element={<SavingsAccounts />} />
             <Route path="/credit-cards" element={<CreditCards />} />
             <Route path="/apply-credit-card" element={<CreditCardApplication />} />
-            <Route path="/open-account" element={<OpenAccount />} />
+            <Route path="https://account.firstmonument.com/register" element={<OpenAccount />} />
             <Route path="/about" element={<AboutUs />} />
             <Route path="/contact" element={<ContactUs />} />
             <Route path="/faqs" element={<Faq />} />

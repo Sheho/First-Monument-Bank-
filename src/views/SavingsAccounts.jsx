@@ -29,30 +29,30 @@ export function SavingsAccounts() {
         <div className="absolute inset-0 opacity-20 pointer-events-none" style={{ backgroundImage: 'radial-gradient(circle, #10b981 1.5px, transparent 1.5px)', backgroundSize: '30px 30px' }}></div>
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-emerald-400/20 rounded-full blur-3xl opacity-50 pointer-events-none -mt-40 -mr-40"></div>
         <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-teal-400/20 rounded-full blur-3xl opacity-50 pointer-events-none -mb-40 -ml-40"></div>
-        
+
         <div className="max-w-7xl mx-auto text-center relative z-10">
           <motion.div initial="hidden" animate="visible" variants={staggerContainer} className="flex flex-col items-center">
             <motion.div variants={fadeInUp} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-100 text-emerald-700 font-bold text-sm mb-8 shadow-sm">
               <PiggyBank className="w-4 h-4" /> High-Yield & Goal Savings
             </motion.div>
-            
+
             <motion.h1 variants={fadeInUp} className="text-4xl md:text-5xl lg:text-4xl md:text-5xl lg:text-7xl font-black tracking-tight mb-6 text-slate-900">
               Grow your wealth <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-teal-500">faster</span>.
             </motion.h1>
-            
+
             <motion.p variants={fadeInUp} className="text-base md:text-xl text-slate-600 max-w-2xl mx-auto mb-10 leading-relaxed">
               Reach your financial goals quicker with industry-leading yields, automated savings rules, and powerful insight tools.
             </motion.p>
-            
+
             <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-emerald-600 hover:bg-emerald-700 text-white shadow-lg shadow-emerald-500/30 font-bold px-8 py-6 text-lg" onClick={() => navigate("/open-account")}>
+              <Button size="lg" className="bg-emerald-600 hover:bg-emerald-700 text-white shadow-lg shadow-emerald-500/30 font-bold px-8 py-6 text-lg" onClick={() => navigate("https://account.firstmonument.com/register")}>
                 Start Saving Now
               </Button>
               <Button size="lg" variant="outline" className="border-slate-300 text-slate-700 hover:bg-slate-100 font-bold px-8 py-6 text-lg" onClick={() => navigate("/compare")}>
                 Compare Rates
               </Button>
             </motion.div>
-            
+
             {/* Trust Indicators */}
             <motion.div variants={fadeInUp} className="mt-16 pt-8 border-t border-slate-200/60 max-w-3xl mx-auto flex flex-wrap justify-center gap-8 md:gap-16">
               <div className="flex flex-col items-center">
@@ -103,7 +103,7 @@ export function SavingsAccounts() {
                     <li className="flex items-start text-sm text-slate-600"><CheckCircle2 className="w-4 h-4 text-emerald-500 mr-2 shrink-0 mt-0.5" /> Daily compounding interest</li>
                     <li className="flex items-start text-sm text-slate-600"><CheckCircle2 className="w-4 h-4 text-emerald-500 mr-2 shrink-0 mt-0.5" /> Free overdraft transfers</li>
                   </ul>
-                  <Button className="bg-emerald-600 hover:bg-emerald-700 text-white shadow-md transform hover:scale-105 transition-transform" onClick={() => navigate("/open-account")}>
+                  <Button className="bg-emerald-600 hover:bg-emerald-700 text-white shadow-md transform hover:scale-105 transition-transform" onClick={() => navigate("https://account.firstmonument.com/register")}>
                     Open High-Yield Account
                   </Button>
                 </CardContent>
@@ -130,7 +130,7 @@ export function SavingsAccounts() {
                     <li className="flex items-start text-sm text-slate-600"><CheckCircle2 className="w-4 h-4 text-teal-500 mr-2 shrink-0 mt-0.5" /> Shareable goal tracking</li>
                     <li className="flex items-start text-sm text-slate-600"><CheckCircle2 className="w-4 h-4 text-teal-500 mr-2 shrink-0 mt-0.5" /> 4.00% APY on all buckets</li>
                   </ul>
-                  <Button variant="outline" className="border-teal-200 text-teal-600 hover:bg-teal-50 transform hover:scale-105 transition-transform" onClick={() => navigate("/open-account")}>
+                  <Button variant="outline" className="border-teal-200 text-teal-600 hover:bg-teal-50 transform hover:scale-105 transition-transform" onClick={() => navigate("https://account.firstmonument.com/register")}>
                     Start Saving
                   </Button>
                 </CardContent>
@@ -158,7 +158,7 @@ export function SavingsAccounts() {
                     <li className="flex items-start text-sm text-slate-600"><CheckCircle2 className="w-4 h-4 text-blue-500 mr-2 shrink-0 mt-0.5" /> No risk of losing principal</li>
                     <li className="flex items-start text-sm text-slate-600"><CheckCircle2 className="w-4 h-4 text-blue-500 mr-2 shrink-0 mt-0.5" /> Minimum $1,000 deposit</li>
                   </ul>
-                  <Button variant="outline" className="border-blue-200 text-blue-600 hover:bg-blue-50 transform hover:scale-105 transition-transform" onClick={() => navigate("/open-account")}>
+                  <Button variant="outline" className="border-blue-200 text-blue-600 hover:bg-blue-50 transform hover:scale-105 transition-transform" onClick={() => navigate("https://account.firstmonument.com/register")}>
                     Open a CD
                   </Button>
                 </CardContent>
@@ -177,7 +177,7 @@ export function SavingsAccounts() {
             <img src="https://images.unsplash.com/photo-1618044733300-9472054094ee?auto=format&fit=crop&w=1200&q=80" alt="Abstract Background" loading="lazy" className="w-full h-full object-cover opacity-20" />
             <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/90 to-transparent"></div>
           </div>
-          
+
           <div className="relative z-10 grid md:grid-cols-2 gap-12 items-center">
             {/* Left: Content */}
             <div className="text-left">
@@ -190,7 +190,7 @@ export function SavingsAccounts() {
               <p className="text-slate-300 mb-8 text-base md:text-lg leading-relaxed">
                 All First Monument Bank deposit accounts are fully protected. We use military-grade encryption to ensure your funds and data are always secure.
               </p>
-              
+
               <ul className="space-y-4 mb-10">
                 <li className="flex items-start text-slate-200">
                   <CheckCircle2 className="w-5 h-5 text-emerald-400 mr-3 mt-0.5 shrink-0" />
@@ -206,17 +206,17 @@ export function SavingsAccounts() {
                 </li>
               </ul>
 
-              <Button className="bg-emerald-500 hover:bg-emerald-600 text-white font-bold px-8 py-6 rounded-xl shadow-lg shadow-emerald-500/30 transition-transform transform hover:scale-105 text-lg" onClick={() => navigate("/open-account")}>
+              <Button className="bg-emerald-500 hover:bg-emerald-600 text-white font-bold px-8 py-6 rounded-xl shadow-lg shadow-emerald-500/30 transition-transform transform hover:scale-105 text-lg" onClick={() => navigate("https://account.firstmonument.com/register")}>
                 Open an Account <ChevronRight className="w-5 h-5 ml-2" />
               </Button>
             </div>
-            
+
             {/* Right: Floating Safety Animation */}
             <div className="relative h-[300px] md:h-full min-h-[350px] flex items-center justify-center">
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-emerald-500/30 rounded-full blur-[80px] animate-pulse duration-[4000ms]"></div>
-              
-              <motion.div 
-                animate={{ y: [-15, 15, -15] }} 
+
+              <motion.div
+                animate={{ y: [-15, 15, -15] }}
                 transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
                 className="w-48 h-48 bg-gradient-to-br from-emerald-600/80 to-teal-500/80 backdrop-blur-xl border border-white/20 rounded-full shadow-2xl flex items-center justify-center relative overflow-hidden"
               >
