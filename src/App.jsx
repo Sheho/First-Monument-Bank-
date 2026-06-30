@@ -11,13 +11,11 @@ const CheckingAccounts = lazy(() => import("./views/CheckingAccounts").then(m =>
 const SavingsAccounts = lazy(() => import("./views/SavingsAccounts").then(m => ({ default: m.SavingsAccounts })));
 const CreditCards = lazy(() => import("./views/CreditCards").then(m => ({ default: m.CreditCards })));
 const CreditCardApplication = lazy(() => import("./views/CreditCardApplication").then(m => ({ default: m.CreditCardApplication })));
-const Login = lazy(() => import("./views/Login").then(m => ({ default: m.Login })));
 const Dashboard = lazy(() => import("./views/Dashboard").then(m => ({ default: m.Dashboard })));
 const Accounts = lazy(() => import("./views/Accounts").then(m => ({ default: m.Accounts })));
 const Transfers = lazy(() => import("./views/Transfers").then(m => ({ default: m.Transfers })));
 const Loans = lazy(() => import("./views/Loans").then(m => ({ default: m.Loans })));
 const VirtualCards = lazy(() => import("./views/VirtualCards").then(m => ({ default: m.VirtualCards })));
-const OpenAccount = lazy(() => import("./views/OpenAccount").then(m => ({ default: m.OpenAccount })));
 const Faq = lazy(() => import("./views/Faq").then(m => ({ default: m.Faq })));
 const AboutUs = lazy(() => import("./views/AboutUs").then(m => ({ default: m.AboutUs })));
 const ContactUs = lazy(() => import("./views/ContactUs").then(m => ({ default: m.ContactUs })));
@@ -79,12 +77,10 @@ function App() {
           {/* Public Routes */}
           <Route element={<MainLayout />}>
             <Route path="/" element={<Home />} />
-            <Route path="https://account.firstmonument.com/login" element={<Login />} />
             <Route path="/checking" element={<CheckingAccounts />} />
             <Route path="/savings" element={<SavingsAccounts />} />
             <Route path="/credit-cards" element={<CreditCards />} />
             <Route path="/apply-credit-card" element={<CreditCardApplication />} />
-            <Route path="https://account.firstmonument.com/register" element={<OpenAccount />} />
             <Route path="/about" element={<AboutUs />} />
             <Route path="/contact" element={<ContactUs />} />
             <Route path="/faqs" element={<Faq />} />

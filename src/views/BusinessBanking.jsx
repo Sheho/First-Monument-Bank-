@@ -53,7 +53,7 @@ export function BusinessBanking() {
               From checking accounts for startups to complex cash management for established corporations, we provide the tools and capital you need to succeed. Experience banking built for visionaries.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Button size="sm" className="hover:bg-blue-600 bg-blue-700 text-white border-none" onClick={() => navigate('/open-account')}>
+              <Button size="sm" className="hover:bg-blue-600 bg-blue-700 text-white border-none" onClick={() => window.location.href = 'https://account.firstmonument.com/register'}>
                 Open a Business Account
               </Button>
               <Button size="sm" variant="outline" className="border-blue-500/30 text-blue-300 hover:bg-blue-900/50 hover:text-white" onClick={() => navigate('/contact')}>
@@ -134,7 +134,7 @@ export function BusinessBanking() {
                 <li className="flex gap-3 text-sm text-slate-600"><CheckCircle2 className="w-5 h-5 text-emerald-500 shrink-0" /> $5,000 cash deposit per month free</li>
                 <li className="flex gap-3 text-sm text-slate-600"><CheckCircle2 className="w-5 h-5 text-emerald-500 shrink-0" /> First Monument Business Debit Card</li>
               </ul>
-              <Button className="w-full hover:bg-slate-100 bg-white text-slate-900 border border-slate-300" onClick={() => navigate('/open-account')}>Open Total Business</Button>
+              <Button className="w-full hover:bg-slate-100 bg-white text-slate-900 border border-slate-300" onClick={() => window.location.href = 'https://account.firstmonument.com/register'}>Open Total Business</Button>
             </div>
 
             {/* Performance Business */}
@@ -151,7 +151,7 @@ export function BusinessBanking() {
                 <li className="flex gap-3 text-sm text-slate-600"><CheckCircle2 className="w-5 h-5 text-blue-600 shrink-0" /> $20,000 cash deposit per month free</li>
                 <li className="flex gap-3 text-sm text-slate-600"><CheckCircle2 className="w-5 h-5 text-blue-600 shrink-0" /> 2 free incoming domestic wires per month</li>
               </ul>
-              <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white" onClick={() => navigate('/open-account')}>Open Performance</Button>
+              <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white" onClick={() => window.location.href = 'https://account.firstmonument.com/register'}>Open Performance</Button>
             </div>
 
             {/* Commercial */}
@@ -274,5 +274,6 @@ export function BusinessBanking() {
     </div>
   );
 }
+
 
 

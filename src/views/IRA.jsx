@@ -14,7 +14,7 @@ export function IRA() {
           <h1 className="text-2xl md:text-3xl md:text-4xl md:text-5xl font-bold text-slate-900 mb-6">Plan your retirement, your way.</h1>
           <p className="text-base md:text-lg text-slate-600 mb-10">Whether you want tax benefits now or tax-free income later, an Individual Retirement Account (IRA) from First Monument Bank puts you in control of your future.</p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Button size="sm" className=" hover: text-white" onClick={() => navigate('/open-account')}>Open an IRA</Button>
+            <Button size="sm" className=" hover: text-white" onClick={() => window.location.href = 'https://account.firstmonument.com/register'}>Open an IRA</Button>
             <Button size="sm" variant="outline" className="border-emerald-200 text-emerald-700" onClick={() => navigate('/contact')}>Talk to an Advisor</Button>
           </div>
         </div>
@@ -80,4 +80,5 @@ export function IRA() {
     </div>
   );
 }
+
 

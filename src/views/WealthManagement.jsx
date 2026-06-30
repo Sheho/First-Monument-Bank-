@@ -63,7 +63,7 @@ export function WealthManagement() {
               <BarChart3 className="w-16 h-16 text-blue-400 mb-6" />
               <h3 className="text-2xl font-bold text-white mb-3">Intelligent Portfolios</h3>
               <p className="text-slate-400 mb-6">Prefer a digital-first approach? Our automated investing platform builds a globally diversified portfolio tailored to your risk tolerance, automatically rebalancing to keep you on track.</p>
-              <Button variant="outline" className="border-blue-500/30 text-blue-300 hover:bg-blue-900/50 hover:text-white w-full" onClick={() => navigate('/open-account')}>
+              <Button variant="outline" className="border-blue-500/30 text-blue-300 hover:bg-blue-900/50 hover:text-white w-full" onClick={() => window.location.href = 'https://account.firstmonument.com/register'}>
                 Start Investing with $0 Commission
               </Button>
             </div>
@@ -258,6 +258,7 @@ export function WealthManagement() {
     </div>
   );
 }
+
 
 
 

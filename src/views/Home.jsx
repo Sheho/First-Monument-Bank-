@@ -66,7 +66,7 @@ export function Home() {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    navigate('/login');
+    window.location.href = 'https://account.firstmonument.com/login';
   };
 
   const HomeIllustration = () => {
@@ -97,7 +97,7 @@ export function Home() {
                 <p className="text-xs text-slate-600 mt-1">Enjoy transparent banking with easy ways to waive monthly service fees.</p>
               </div>
             </div>
-            <Button className="relative overflow-hidden group hover:text-white mt-4 w-full" onClick={() => navigate('/open-account')}>
+            <Button className="relative overflow-hidden group hover:text-white mt-4 w-full" onClick={() => window.location.href = 'https://account.firstmonument.com/register'}>
               <span className="relative z-10 font-bold text-base">Claim Your $300 Bonus</span>
             </Button>
             <p className="text-center text-[10px] text-slate-400 mt-2">Offer expires 12/31/2026. Terms and conditions apply.</p>
@@ -325,7 +325,7 @@ export function Home() {
               viewport={{ once: true }}
               whileHover={{ scale: 0.98, transition: { type: "spring", stiffness: 400, damping: 20 } }}
               className="md:col-span-2 md:row-span-2 rounded-3xl bg-blue-900 p-6 md:p-8 relative overflow-hidden flex flex-col justify-between group cursor-pointer shadow-xl border-none"
-              onClick={() => navigate('/open-account')}
+              onClick={() => window.location.href = 'https://account.firstmonument.com/register'}
             >
               <motion.div
                 animate={{ rotate: 360 }}
@@ -373,7 +373,7 @@ export function Home() {
               transition={{ delay: 0.1 }}
               whileHover={{ scale: 0.98, transition: { type: "spring", stiffness: 400, damping: 20 } }}
               className="md:col-span-1 md:row-span-2 rounded-3xl bg-emerald-800 p-6 md:p-8 relative overflow-hidden flex flex-col justify-between group cursor-pointer shadow-xl border-none"
-              onClick={() => navigate('/open-account')}
+              onClick={() => window.location.href = 'https://account.firstmonument.com/register'}
             >
               <motion.div
                 animate={{ rotate: -360 }}
@@ -415,7 +415,7 @@ export function Home() {
               transition={{ delay: 0.2 }}
               whileHover={{ scale: 0.98, transition: { type: "spring", stiffness: 400, damping: 20 } }}
               className="md:col-span-1 md:row-span-1 rounded-3xl bg-slate-900 p-6 relative overflow-hidden group cursor-pointer flex flex-col justify-center shadow-xl border-none"
-              onClick={() => navigate('/open-account')}
+              onClick={() => window.location.href = 'https://account.firstmonument.com/register'}
             >
               <motion.div
                 animate={{ rotate: 360 }}
@@ -502,7 +502,7 @@ export function Home() {
               </div>
 
               <div className="flex flex-col sm:flex-row w-full md:w-auto shrink-0 relative z-10 gap-3">
-                <Button className="bg-emerald-600 hover:bg-emerald-500 text-white shadow-[0_0_20px_rgba(16,185,129,0.3)] border-none px-8 font-bold" onClick={() => navigate('/open-account')}>Open an Account</Button>
+                <Button className="bg-emerald-600 hover:bg-emerald-500 text-white shadow-[0_0_20px_rgba(16,185,129,0.3)] border-none px-8 font-bold" onClick={() => window.location.href = 'https://account.firstmonument.com/register'}>Open an Account</Button>
               </div>
             </motion.div>
           </div>
@@ -726,4 +726,5 @@ export function Home() {
     </div>
   );
 }
+
 

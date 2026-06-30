@@ -86,10 +86,10 @@ export function MainLayout() {
               <Link to="/about" className="text-sm font-medium text-[var(--color-bank-text-muted)] hover:text-slate-900 transition-colors">About Us</Link>
             </nav>
             <div className="flex items-center gap-4">
-              <Link to="https://account.firstmonument.com/login" className="text-xs font-medium text-slate-900 hover:text-blue-600 transition-colors hidden sm:block">Sign In</Link>
-              <Link to="https://account.firstmonument.com/register" className="hidden md:inline-flex bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-white px-4 py-1.5 rounded-full text-xs font-semibold transition-all shadow-[0_0_15px_rgba(37,99,235,0.3)] hover:shadow-[0_0_25px_rgba(37,99,235,0.5)]">
+              <a href="https://account.firstmonument.com/login" className="text-xs font-medium text-slate-900 hover:text-blue-600 transition-colors hidden sm:block">Sign In</a>
+              <a href="https://account.firstmonument.com/register" className="hidden md:inline-flex bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-white px-4 py-1.5 rounded-full text-xs font-semibold transition-all shadow-[0_0_15px_rgba(37,99,235,0.3)] hover:shadow-[0_0_25px_rgba(37,99,235,0.5)]">
                 Open an Account
-              </Link>
+              </a>
               <button
                 className="md:hidden text-slate-900 hover:text-blue-600 transition-colors p-1"
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -143,8 +143,8 @@ export function MainLayout() {
           </div>
 
           <div className="pt-6 border-t border-slate-200 flex flex-col gap-4 mt-auto">
-            <Link to="https://account.firstmonument.com/login" onClick={() => setIsMobileMenuOpen(false)} className="text-sm font-medium text-slate-900 text-center border border-slate-300 rounded-full py-3 hover:bg-slate-50 transition-all">Sign In</Link>
-            <Link to="https://account.firstmonument.com/register" onClick={() => setIsMobileMenuOpen(false)} className="text-sm font-medium text-white text-center bg-gradient-to-r from-blue-600 to-blue-800 rounded-full py-3 hover:opacity-90 transition-all">Open an Account</Link>
+            <a href="https://account.firstmonument.com/login" onClick={() => setIsMobileMenuOpen(false)} className="text-sm font-medium text-slate-900 text-center border border-slate-300 rounded-full py-3 hover:bg-slate-50 transition-all">Sign In</a>
+            <a href="https://account.firstmonument.com/register" onClick={() => setIsMobileMenuOpen(false)} className="text-sm font-medium text-white text-center bg-gradient-to-r from-blue-600 to-blue-800 rounded-full py-3 hover:opacity-90 transition-all">Open an Account</a>
           </div>
         </div>
       </div>

@@ -250,7 +250,7 @@ export function HELOC() {
             <div className="flex-1">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">What you'll need to apply</h2>
               <p className="text-lg text-slate-300 mb-8">Gathering your documents ahead of time ensures a smooth, rapid underwriting process. Most approvals happen within 48 hours when a complete package is submitted.</p>
-              <Button className="bg-blue-600 hover:bg-blue-700 text-white border-none shadow-[0_0_15px_rgba(37,99,235,0.4)]" onClick={() => navigate('/open-account')}>
+              <Button className="bg-blue-600 hover:bg-blue-700 text-white border-none shadow-[0_0_15px_rgba(37,99,235,0.4)]" onClick={() => window.location.href = 'https://account.firstmonument.com/register'}>
                 Start Your Application
               </Button>
             </div>
@@ -381,6 +381,7 @@ export function HELOC() {
     </div>
   );
 }
+
 
 
 
