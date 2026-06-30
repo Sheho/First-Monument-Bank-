@@ -119,7 +119,7 @@ export function Home() {
         titleSuffix=". Achieve everything you want in life."
         subtitle="Experience a partner in your financial journey. Enjoy simple, secure, and centralized access to your accounts, backed by our unwavering commitment to your financial health."
         primaryButtonText="Open an Account"
-        primaryButtonAction={(nav) => nav("https://account.firstmonument.com/register")}
+        primaryButtonAction={() => window.location.href = "https://account.firstmonument.com/register"}
         secondaryButtonText="Explore Features"
         secondaryButtonAction={(nav) => { }}
         illustration={HomeIllustration}
