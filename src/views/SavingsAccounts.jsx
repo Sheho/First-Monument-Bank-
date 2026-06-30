@@ -45,7 +45,7 @@ export function SavingsAccounts() {
             </motion.p>
 
             <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-emerald-600 hover:bg-emerald-700 text-white shadow-lg shadow-emerald-500/30 font-bold px-8 py-6 text-lg" onClick={() => navigate("https://account.firstmonument.com/register")}>
+              <Button size="lg" className="bg-emerald-600 hover:bg-emerald-700 text-white shadow-lg shadow-emerald-500/30 font-bold px-8 py-6 text-lg" onClick={() => window.location.href = "https://account.firstmonument.com/register"}>
                 Start Saving Now
               </Button>
               <Button size="lg" variant="outline" className="border-slate-300 text-slate-700 hover:bg-slate-100 font-bold px-8 py-6 text-lg" onClick={() => navigate("/compare")}>
@@ -103,7 +103,7 @@ export function SavingsAccounts() {
                     <li className="flex items-start text-sm text-slate-600"><CheckCircle2 className="w-4 h-4 text-emerald-500 mr-2 shrink-0 mt-0.5" /> Daily compounding interest</li>
                     <li className="flex items-start text-sm text-slate-600"><CheckCircle2 className="w-4 h-4 text-emerald-500 mr-2 shrink-0 mt-0.5" /> Free overdraft transfers</li>
                   </ul>
-                  <Button className="bg-emerald-600 hover:bg-emerald-700 text-white shadow-md transform hover:scale-105 transition-transform" onClick={() => navigate("https://account.firstmonument.com/register")}>
+                  <Button className="bg-emerald-600 hover:bg-emerald-700 text-white shadow-md transform hover:scale-105 transition-transform" onClick={() => window.location.href = "https://account.firstmonument.com/register"}>
                     Open High-Yield Account
                   </Button>
                 </CardContent>
@@ -130,7 +130,7 @@ export function SavingsAccounts() {
                     <li className="flex items-start text-sm text-slate-600"><CheckCircle2 className="w-4 h-4 text-teal-500 mr-2 shrink-0 mt-0.5" /> Shareable goal tracking</li>
                     <li className="flex items-start text-sm text-slate-600"><CheckCircle2 className="w-4 h-4 text-teal-500 mr-2 shrink-0 mt-0.5" /> 4.00% APY on all buckets</li>
                   </ul>
-                  <Button variant="outline" className="border-teal-200 text-teal-600 hover:bg-teal-50 transform hover:scale-105 transition-transform" onClick={() => navigate("https://account.firstmonument.com/register")}>
+                  <Button variant="outline" className="border-teal-200 text-teal-600 hover:bg-teal-50 transform hover:scale-105 transition-transform" onClick={() => window.location.href = "https://account.firstmonument.com/register"}>
                     Start Saving
                   </Button>
                 </CardContent>
@@ -158,7 +158,7 @@ export function SavingsAccounts() {
                     <li className="flex items-start text-sm text-slate-600"><CheckCircle2 className="w-4 h-4 text-blue-500 mr-2 shrink-0 mt-0.5" /> No risk of losing principal</li>
                     <li className="flex items-start text-sm text-slate-600"><CheckCircle2 className="w-4 h-4 text-blue-500 mr-2 shrink-0 mt-0.5" /> Minimum $1,000 deposit</li>
                   </ul>
-                  <Button variant="outline" className="border-blue-200 text-blue-600 hover:bg-blue-50 transform hover:scale-105 transition-transform" onClick={() => navigate("https://account.firstmonument.com/register")}>
+                  <Button variant="outline" className="border-blue-200 text-blue-600 hover:bg-blue-50 transform hover:scale-105 transition-transform" onClick={() => window.location.href = "https://account.firstmonument.com/register"}>
                     Open a CD
                   </Button>
                 </CardContent>
@@ -206,7 +206,7 @@ export function SavingsAccounts() {
                 </li>
               </ul>
 
-              <Button className="bg-emerald-500 hover:bg-emerald-600 text-white font-bold px-8 py-6 rounded-xl shadow-lg shadow-emerald-500/30 transition-transform transform hover:scale-105 text-lg" onClick={() => navigate("https://account.firstmonument.com/register")}>
+              <Button className="bg-emerald-500 hover:bg-emerald-600 text-white font-bold px-8 py-6 rounded-xl shadow-lg shadow-emerald-500/30 transition-transform transform hover:scale-105 text-lg" onClick={() => window.location.href = "https://account.firstmonument.com/register"}>
                 Open an Account <ChevronRight className="w-5 h-5 ml-2" />
               </Button>
             </div>
@@ -230,5 +230,6 @@ export function SavingsAccounts() {
     </div>
   );
 }
+
 
 

@@ -61,7 +61,7 @@ export function CheckingAccounts() {
             </motion.p>
 
             <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white shadow-lg shadow-blue-500/30 font-bold px-8 py-6 text-lg" onClick={() => navigate("https://account.firstmonument.com/register")}>
+              <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white shadow-lg shadow-blue-500/30 font-bold px-8 py-6 text-lg" onClick={() => window.location.href = "https://account.firstmonument.com/register"}>
                 Find Your Account
               </Button>
               <Button size="lg" variant="outline" className="border-slate-300 text-slate-700 hover:bg-slate-100 font-bold px-8 py-6 text-lg" onClick={() => navigate("/compare")}>
@@ -119,7 +119,7 @@ export function CheckingAccounts() {
                     <li className="flex items-start text-sm text-slate-600"><CheckCircle2 className="w-4 h-4 text-blue-600 mr-2 mt-0.5 flex-shrink-0" /> No fees on incoming or outgoing wire transfers</li>
                     <li className="flex items-start text-sm text-slate-600"><CheckCircle2 className="w-4 h-4 text-blue-600 mr-2 mt-0.5 flex-shrink-0" /> Avoid the $35 monthly fee with $75K+ in linked deposits/investments</li>
                   </ul>
-                  <Button className="bg-blue-600 hover:bg-blue-700 text-white shadow-md transform hover:scale-105 transition-transform" onClick={() => navigate("https://account.firstmonument.com/register")}>
+                  <Button className="bg-blue-600 hover:bg-blue-700 text-white shadow-md transform hover:scale-105 transition-transform" onClick={() => window.location.href = "https://account.firstmonument.com/register"}>
                     Open Premier Account
                   </Button>
                 </CardContent>
@@ -146,7 +146,7 @@ export function CheckingAccounts() {
                     <li className="flex items-start text-sm text-slate-600"><CheckCircle2 className="w-4 h-4 text-blue-400 mr-2 mt-0.5 flex-shrink-0" /> Send and receive money in moments with Zelle®</li>
                     <li className="flex items-start text-sm text-slate-600"><CheckCircle2 className="w-4 h-4 text-blue-400 mr-2 mt-0.5 flex-shrink-0" /> 24/7 fraud monitoring and Zero Liability Protection</li>
                   </ul>
-                  <Button variant="outline" className="border-blue-200 text-blue-600 hover:bg-blue-50 transform hover:scale-105 transition-transform" onClick={() => navigate("https://account.firstmonument.com/register")}>
+                  <Button variant="outline" className="border-blue-200 text-blue-600 hover:bg-blue-50 transform hover:scale-105 transition-transform" onClick={() => window.location.href = "https://account.firstmonument.com/register"}>
                     Open Everyday Account
                   </Button>
                 </CardContent>
@@ -173,7 +173,7 @@ export function CheckingAccounts() {
                     <li className="flex items-start text-sm text-slate-600"><CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" /> Free access to credit score and financial education tools</li>
                     <li className="flex items-start text-sm text-slate-600"><CheckCircle2 className="w-4 h-4 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" /> Seamless parent transfers via the mobile app</li>
                   </ul>
-                  <Button variant="outline" className="border-cyan-200 text-cyan-700 hover:bg-cyan-50 transform hover:scale-105 transition-transform" onClick={() => navigate("https://account.firstmonument.com/register")}>
+                  <Button variant="outline" className="border-cyan-200 text-cyan-700 hover:bg-cyan-50 transform hover:scale-105 transition-transform" onClick={() => window.location.href = "https://account.firstmonument.com/register"}>
                     Open Student Account
                   </Button>
                 </CardContent>
@@ -386,6 +386,7 @@ export function CheckingAccounts() {
     </div>
   );
 }
+
 
 
 

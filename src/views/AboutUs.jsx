@@ -157,9 +157,9 @@ export function AboutUs() {
               <p className="text-sm md:text-base text-slate-600 leading-relaxed">
                 At First Monument Bank, our mission is to deliver financial solutions that enhance the lives of our customers and strengthen our communities. We strive to build long-lasting relationships based on trust, integrity, and mutual respect.
               </p>
-              <Link to="https://account.firstmonument.com/register" className="inline-block bg-blue-600 hover:bg-blue-700 text-white shadow-lg shadow-blue-500/30 px-6 py-2.5 mt-4 rounded-xl font-semibold transition-all">
+              <a href="https://account.firstmonument.com/register" className="inline-block bg-blue-600 hover:bg-blue-700 text-white shadow-lg shadow-blue-500/30 px-6 py-2.5 mt-4 rounded-xl font-semibold transition-all">
                 Create an Account
-              </Link>
+              </a>
             </div>
 
             {/* Right: Bento Grid of Images */}
