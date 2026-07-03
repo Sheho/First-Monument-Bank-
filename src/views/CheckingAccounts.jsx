@@ -221,7 +221,7 @@ export function CheckingAccounts() {
                 </li>
               </ul>
 
-              <Button className="bg-blue-500 hover:bg-blue-600 text-white font-bold px-8 py-6 rounded-xl shadow-lg shadow-blue-500/30 transition-transform transform hover:scale-105 text-lg" onClick={() => navigate("/virtual-cards")}>
+              <Button className="bg-blue-500 hover:bg-blue-600 text-white font-bold px-8 py-6 rounded-xl shadow-lg shadow-blue-500/30 transition-transform transform hover:scale-105 text-lg" onClick={() => navigate("/about")}>
                 Learn More <ChevronRight className="w-5 h-5 ml-2" />
               </Button>
             </div>
