@@ -86,6 +86,7 @@ export function MainLayout() {
               <Link to="/about" className="text-sm font-medium text-[var(--color-bank-text-muted)] hover:text-slate-900 transition-colors">About Us</Link>
             </nav>
             <div className="flex items-center gap-4">
+              <div id="google_translate_element" className="hidden lg:block mt-2"></div>
               <a href="https://account.firstmonument.com/login" className="text-xs font-medium text-slate-900 hover:text-blue-600 transition-colors hidden sm:block">Sign In</a>
               <a href="https://account.firstmonument.com/register" className="hidden md:inline-flex bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-white px-4 py-1.5 rounded-full text-xs font-semibold transition-all shadow-[0_0_15px_rgba(37,99,235,0.3)] hover:shadow-[0_0_25px_rgba(37,99,235,0.5)]">
                 Open an Account

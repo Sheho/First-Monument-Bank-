@@ -92,6 +92,7 @@ export function DashboardLayout() {
             {navItems.find(i => i.path === location.pathname)?.label || "Dashboard"}
           </h1>
           <div className="flex items-center gap-4">
+            <div id="google_translate_element" className="mt-2"></div>
             <button className="p-2 rounded-full hover:bg-[rgba(255,255,255,0.05)] text-[var(--color-bank-text-muted)] hover:text-slate-900 transition-colors">
               <Bell className="w-5 h-5" />
             </button>
