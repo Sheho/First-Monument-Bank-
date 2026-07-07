@@ -2,7 +2,6 @@ import { Suspense, lazy } from "react";
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import { MainLayout } from "./layouts/MainLayout";
 import { DashboardLayout } from "./layouts/DashboardLayout";
-import { Chatbot } from "./components/Chatbot";
 import { ScrollToTop } from "./components/ScrollToTop";
 
 // Lazy load feature views for performance
@@ -114,7 +113,6 @@ function App() {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>
-      <Chatbot />
     </Router>
   );
 }
