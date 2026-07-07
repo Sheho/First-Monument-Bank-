@@ -83,6 +83,11 @@ body {
   height: 34px !important;
 }
 
+.goog-te-gadget .goog-te-combo option {
+  color: #0f172a !important;
+  background-color: #ffffff !important;
+}
+
 .goog-logo-link, .goog-te-gadget > span > a {
   display: none !important;
 }
