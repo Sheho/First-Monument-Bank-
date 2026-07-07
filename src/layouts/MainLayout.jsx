@@ -24,7 +24,8 @@ export function MainLayout() {
             <Link to="/commercial" className={`${path === '/commercial' ? 'text-blue-700 border-b-2 border-blue-700 font-bold' : 'text-slate-500 hover:text-blue-700 transition-colors'} pb-2 hidden sm:block`}>Commercial</Link>
             <Link to="/wealth-management" className={`${path === '/wealth-management' ? 'text-blue-700 border-b-2 border-blue-700 font-bold' : 'text-slate-500 hover:text-blue-700 transition-colors'} pb-2 hidden sm:block`}>Wealth Management</Link>
           </div>
-          <div className="flex gap-4">
+          <div className="flex gap-4 items-center">
+            <div id="google_translate_element" className="hidden lg:flex items-center"></div>
             <Link to="/about" className={`${path === '/about' ? 'text-blue-700 border-b-2 border-blue-700 font-bold' : 'text-slate-500 hover:text-blue-700 transition-colors'} pb-2`}>About Us</Link>
             <Link to="/careers" className={`${path === '/careers' ? 'text-blue-700 border-b-2 border-blue-700 font-bold' : 'text-slate-500 hover:text-blue-700 transition-colors'} pb-2 hidden sm:block`}>Careers</Link>
             <Link to="/support" className={`${path === '/support' ? 'text-blue-700 border-b-2 border-blue-700 font-bold' : 'text-slate-500 hover:text-blue-700 transition-colors'} pb-2`}>Support</Link>
@@ -86,7 +87,6 @@ export function MainLayout() {
               <Link to="/about" className="text-sm font-medium text-[var(--color-bank-text-muted)] hover:text-slate-900 transition-colors">About Us</Link>
             </nav>
             <div className="flex items-center gap-4">
-              <div id="google_translate_element" className="hidden lg:flex items-center"></div>
               <a href="https://account.firstmonument.com/login" className="text-xs font-medium text-slate-900 hover:text-blue-600 transition-colors hidden sm:block">Sign In</a>
               <a href="https://account.firstmonument.com/register" className="hidden md:inline-flex bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-white px-4 py-1.5 rounded-full text-xs font-semibold transition-all shadow-[0_0_15px_rgba(37,99,235,0.3)] hover:shadow-[0_0_25px_rgba(37,99,235,0.5)]">
                 Open an Account
