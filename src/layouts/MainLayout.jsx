@@ -17,15 +17,15 @@ export function MainLayout() {
 
       {/* Super Header for Verticals */}
       <div className="w-full bg-white text-slate-600 text-[10px] md:text-xs font-medium py-2 px-4 sm:px-6 lg:px-8 border-b border-slate-200 z-50 relative">
-        <div className="max-w-7xl mx-auto flex justify-between items-center">
+        <div className="max-w-7xl mx-auto flex flex-wrap gap-2 justify-between items-center">
           <div className="flex gap-6">
             <Link to="/" className={`${path === '/' ? 'text-blue-700 border-b-2 border-blue-700 font-bold' : 'text-slate-500 hover:text-blue-700 transition-colors'} pb-2`}>Personal</Link>
             <Link to="/business" className={`${path === '/business' ? 'text-blue-700 border-b-2 border-blue-700 font-bold' : 'text-slate-500 hover:text-blue-700 transition-colors'} pb-2`}>Small Business</Link>
             <Link to="/commercial" className={`${path === '/commercial' ? 'text-blue-700 border-b-2 border-blue-700 font-bold' : 'text-slate-500 hover:text-blue-700 transition-colors'} pb-2 hidden sm:block`}>Commercial</Link>
             <Link to="/wealth-management" className={`${path === '/wealth-management' ? 'text-blue-700 border-b-2 border-blue-700 font-bold' : 'text-slate-500 hover:text-blue-700 transition-colors'} pb-2 hidden sm:block`}>Wealth Management</Link>
           </div>
-          <div className="flex gap-4 items-center">
-            <div id="google_translate_element" className="hidden lg:flex items-center"></div>
+          <div className="flex gap-4 items-center flex-wrap">
+            <div id="google_translate_element" className="flex items-center"></div>
             <Link to="/about" className={`${path === '/about' ? 'text-blue-700 border-b-2 border-blue-700 font-bold' : 'text-slate-500 hover:text-blue-700 transition-colors'} pb-2`}>About Us</Link>
             <Link to="/careers" className={`${path === '/careers' ? 'text-blue-700 border-b-2 border-blue-700 font-bold' : 'text-slate-500 hover:text-blue-700 transition-colors'} pb-2 hidden sm:block`}>Careers</Link>
             <Link to="/support" className={`${path === '/support' ? 'text-blue-700 border-b-2 border-blue-700 font-bold' : 'text-slate-500 hover:text-blue-700 transition-colors'} pb-2`}>Support</Link>
